@@ -1,0 +1,10 @@
+<?php
+include "koneksi.php";
+
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+    header("Location: index.php");
+    exit;
+}
+
+header("Location: admin/users.php");
+exit;
